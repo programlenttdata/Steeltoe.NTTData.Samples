@@ -1,0 +1,28 @@
+﻿version: '3.4'
+
+services:
+  Test1:
+    image: microsoft/mssql-server-linux:2017-latest
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"   
+  Test2:
+    image: microsoft/mssql-server-linux:2017-latest
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5434:1433"
+
+  Web:
+    image: test:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: SqlServerEFCore/Dockerfile
+    depends_on:
+      - Test1
+      - Test2
+    ports:
+      - "5100:80"

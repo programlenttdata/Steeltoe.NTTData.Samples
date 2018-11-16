@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!--<Import Project="..\..\..\..\config\versions.props" />-->
+	<PropertyGroup>
+		<SteeltoeCircuitBreakerVersion>2.1.1</SteeltoeCircuitBreakerVersion>
+		<SteeltoeCommonVersion>2.1.1</SteeltoeCommonVersion>
+		<SteeltoeConfigVersion>2.1.1</SteeltoeConfigVersion>
+		<SteeltoeConnectorVersion>2.1.1</SteeltoeConnectorVersion>
+		<SteeltoeDiscoveryVersion>2.1.1</SteeltoeDiscoveryVersion>
+		<SteeltoeLoggingVersion>2.1.1</SteeltoeLoggingVersion>
+		<SteeltoeManagementVersion>2.1.1</SteeltoeManagementVersion>
+		<SteeltoeSecurityVersion>2.1.1</SteeltoeSecurityVersion>
+		<PivotalConfigVersion>2.1.1</PivotalConfigVersion>
+		<PivotalDiscoveryVersion>2.1.1</PivotalDiscoveryVersion>
+		<AspNetCoreVersion>2.1.1</AspNetCoreVersion>
+		<JsonNetVersion>11.0.3</JsonNetVersion>
+		<RabbitMQVersion>5.1.0</RabbitMQVersion>
+	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerTargetOS>Linux</DockerTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Connectors\Steeltoe.CloudFoundry.Connector.EFCore\Steeltoe.CloudFoundry.Connector.EFCore.csproj" />
+  </ItemGroup>
+</Project>

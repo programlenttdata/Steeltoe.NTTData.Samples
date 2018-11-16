@@ -1,0 +1,19 @@
+﻿@model (List<Test1Data>, List<Test2Data>)
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>Test data 1 from Sql Server:</h2>
+<ul>
+    @foreach (var td in Model.Item1)
+    {
+        <li>@td.Id: @td.Data</li>
+    }
+</ul>
+
+<h2>Test data 2 from Sql Server:</h2>
+<ul>
+    @foreach (var td in Model.Item2)
+    {
+        <li>@td.Id: @td.Data</li>
+    }
+</ul>

@@ -1,0 +1,11 @@
+﻿version: '3.4'
+
+services:
+  myMySqlService1:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=steeltoe
+      - MYSQL_USER=steeltoe
+      - MYSQL_PASSWORD=steeltoe
+    ports:
+      - "3306:3306"  
