@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mssql4:
+    image: ${DOCKER_REGISTRY}mssql4
+    build:
+      context: .\MsSql4
+      dockerfile: Dockerfile
